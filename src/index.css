@@ -20,6 +20,13 @@ code {
   right: 0;
   border: 2px dotted rgb(0, 0, 0);
 }
+#theme {
+  position: absolute;
+  right: 0;
+  top: 10%;
+}
+
+/* left navigation */
 .left-nav-body {
   position: fixed;
   left: 0;
@@ -29,7 +36,6 @@ code {
   background-color: rgba(47, 47, 47, 0.7);
   color: #59CAEF;
   border: 2px dotted rgb(0, 0, 0);
-  
   overflow-x: hidden;
 }
 .nav-icon {
@@ -45,10 +51,37 @@ code {
   bottom: 0;
   border: 2px dotted rgb(0, 0, 0);
 }
+
+
+/* portfolio items */
 .details {
   margin: 5px 0 5px 11%;
   height: 98%;
   right: 0;
   background-color: rgba(195, 195, 195, 0.7);
   border: 2px dotted rgb(2, 2, 2);
+  display: grid;
+  grid-template: 2fr 2fr 2fr 2fr / 1fr 2fr 2fr 1fr;
+  grid-gap: 20px;
+}
+.portfolio-item {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(195, 195, 195, 0.7);
+}
+#project-react-project {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+}
+#project-socketio-project {
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+}
+#project-packd {
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+}
+#project-leafslet {
+  grid-row: 3 / 4;
+  grid-column: 3 / 4;
 }

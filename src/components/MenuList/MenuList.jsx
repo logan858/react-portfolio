@@ -13,7 +13,7 @@ class MenuList extends React.Component {
                     <li>Contact</li>
                     <li>About</li>
                 </ul>
-                <NavFooter/>
+                <NavFooter inputText={'footer'} userName={this.props.userName} userEmail={this.props.userEmail}/>
             </div>
         )
     }

@@ -6,8 +6,8 @@ class Background extends React.Component {
     render() {
         return (
             <div className="container">
-                <MenuList/>
-               <Details/>
+                <MenuList username={this.props.userName} userEmail={this.props.userEmail}/>
+                <Details portfolio={this.props.portfolio}/>
             </div>
         )
     }

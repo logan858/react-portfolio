@@ -4,7 +4,9 @@ class NavFooter extends React.Component {
     render() {
         return (
             <div className="nav-footer">
-                botm
+                {this.props.inputText}<br/>
+                {this.props.userName}
+                {this.props.userEmail}
             </div>
         )
     }
