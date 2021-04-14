@@ -85,3 +85,10 @@ code {
   grid-row: 3 / 4;
   grid-column: 3 / 4;
 }
+svg {
+  fill: white;
+  transition: 0.7s;
+}
+svg:hover {
+  fill: rgba(27, 27, 27, 0.7);
+} 
