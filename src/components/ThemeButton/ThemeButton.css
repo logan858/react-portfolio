@@ -1,0 +1,10 @@
+#theme {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    background-color: rgba(27, 27, 27, 0.3);
+    padding: 4px;
+    border-top-left-radius: 6px;
+    transition: 0.7s;
+    cursor: pointer;
+  }

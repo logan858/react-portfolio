@@ -1,13 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 import React, {Component} from 'react';
-import Background from './components/Background/Background'
+import Background from './components/Background/Background';
+import ThemeButton from './components/ThemeButton/ThemeButton';
 
 class App extends Component {
   state = {
     userName: "---",
     userEmail: "place@holder.com",
-    theme: "basic",
+    theme: "Dark",
+    color: "---",
+    accentColor: "---",
     portfolio: [
       {id:0, name:"react-project", link:"url", category:"React"}, 
       {id:1, name:"socketio-project", link:"url", category:"socket.io"}, 
@@ -18,8 +20,21 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div id="theme">theme | {this.state.theme}&nbsp;</div>
-        <Background userName={this.state.userName} userEmail={this.state.userEmail} portfolio={this.state.portfolio}/>
+        <Background 
+          userName={this.state.userName} 
+          userEmail={this.state.userEmail} 
+          portfolio={this.state.portfolio} 
+          theme={this.state.theme}
+          color={this.state.color}
+          accentColor={this.state.accentColor}
+        />
+        <ThemeButton 
+          setTheme={theme=>{this.setState(theme)}} 
+          setColor={color=>{this.setState(color)}} 
+          setAccentColor={accentColor=>{this.setState(accentColor)}}
+          theme={this.state.theme} 
+          color={this.state.color}
+        />
       </div>
     )
   }

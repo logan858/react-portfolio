@@ -1,0 +1,10 @@
+.details {
+    margin: 5px 0 5px 11%;
+    height: 98%;
+    right: 0;
+    background-color: rgba(195, 195, 195, 0.2);
+    display: grid;
+    grid-template: 2fr 2fr 2fr 2fr / 1fr 2fr 2fr 1fr;
+    grid-gap: 20px;
+  }
+  

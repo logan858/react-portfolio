@@ -1,4 +1,5 @@
 import React from 'react';
+import './NavFooter.css'
 
 class NavFooter extends React.Component {
     render() {

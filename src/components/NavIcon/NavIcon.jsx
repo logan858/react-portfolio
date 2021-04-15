@@ -1,4 +1,5 @@
 import React from 'react';
+import './NavIcon.css'
 
 class NavIcon extends React.Component {
     render() {
