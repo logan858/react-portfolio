@@ -1,11 +1,11 @@
 import React from 'react';
-import PortfolioItem from '../PortfolioItem/PortfolioItem'
-import './Details.css';
+import PortfolioItem from '../../components/PortfolioItem/PortfolioItem'
+import './PortfolioPage.css';
 
-class Details extends React.Component {
+class PortfolioPage extends React.Component {
     render() {
         return (
-            <div className="details">
+            <div className="portfolio-frame">
                 {this.props.portfolio.map(port =>
                     <PortfolioItem name={port.name} category={port.category} link={port.link}/>
                 )}
@@ -14,4 +14,4 @@ class Details extends React.Component {
     }
 }
 
-export default Details;
+export default PortfolioPage;

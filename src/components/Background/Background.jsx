@@ -1,7 +1,15 @@
 import React from 'react';
-import MenuList from '../MenuList/MenuList';
-import Details from '../Details/Details';
 import './Background.css';
+import MenuList from '../MenuList/MenuList';
+import { Route } from 'react-router-dom';
+import PortfolioPage from '../../pages/PortfolioPage/PortfolioPage'
+import HomePage from '../../pages/HomePage/HomePage'
+import ContactPage from '../../pages/ContactPage/ContactPage'
+import AboutPage from '../../pages/AboutPage/AboutPage';
+import PReactPage from '../../pages/PReactPage/PReactPage';
+import PSocketIOPage from '../../pages/PSocketIOPage/PSocketIOPage';
+import PPackDPage from '../../pages/PPackDPage/PPackDPage';
+import PLeafsletPage from '../../pages/PLeafsletPage/PLeafsletPage';
 
 class Background extends React.Component {
     render() {
@@ -14,7 +22,50 @@ class Background extends React.Component {
                     color={this.props.color}
                     accentColor={this.props.accentColor}
                 />
-                <Details portfolio={this.props.portfolio}/>
+                <Route path='/home' render={(props) => (
+                    <HomePage 
+                      {...props}
+                    />
+                )}/>
+                <Route path='/portfolio' render={(props) => (
+                    <PortfolioPage 
+                      portfolio={this.props.portfolio} 
+                      {...props}
+                    />
+                )}/>
+                <Route path='/contact' render={(props) => (
+                    <ContactPage 
+                      {...props}
+                    />
+                )}/>
+                <Route path='/about' render={(props) => (
+                    <AboutPage 
+                      {...props}
+                    />
+                )}/>
+
+
+
+                <Route path='/project-react-project' render={(props) => (
+                    <PReactPage 
+                    {...props}
+                    />
+                )}/>
+                <Route path='/project-socketio-project' render={(props) => (
+                    <PSocketIOPage 
+                      {...props}
+                    />
+                )}/>
+                <Route path='/project-packd' render={(props) => (
+                    <PPackDPage 
+                      {...props}
+                    />
+                )}/>
+                <Route path='/project-leafslet' render={(props) => (
+                    <PLeafsletPage 
+                      {...props}
+                    />
+                )}/>
             </div>
         )
     }
