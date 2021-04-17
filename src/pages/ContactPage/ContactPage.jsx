@@ -1,16 +1,12 @@
 import React from 'react';
+import ContactForm from '../../components/ContactForm/ContactForm'
 
-class ContactPage extends React.Component {
-    tester = () => {
-        alert("yep")
-    }
-    render() {
-        return (
-            <div className="portfolio-frame">
-                Contact page!
-            </div>
-        )
-    }
+function ContactPage(props) {
+    return (
+        <div>
+            <ContactForm/>
+        </div>
+    )
 }
 
 export default ContactPage;

@@ -1,11 +1,14 @@
 import React from 'react';
 import './NavIcon.css'
+import { Link } from 'react-router-dom'
 
 class NavIcon extends React.Component {
     render() {
         return (
             <div className="nav-icon">
-                symb
+                <Link to="/">
+                top
+                </Link>
             </div>
         )
     }

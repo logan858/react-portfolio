@@ -1,0 +1,9 @@
+.form {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    right: 0;
+}
+.form-input {
+    display: block;
+    right: 0;
+}

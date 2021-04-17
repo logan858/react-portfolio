@@ -1,6 +1,6 @@
 import React from 'react';
 import PortfolioItem from '../../components/PortfolioItem/PortfolioItem'
-import './PortfolioPage.css';
+
 
 class PortfolioPage extends React.Component {
     render() {

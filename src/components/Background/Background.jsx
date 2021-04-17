@@ -10,6 +10,8 @@ import PReactPage from '../../pages/PReactPage/PReactPage';
 import PSocketIOPage from '../../pages/PSocketIOPage/PSocketIOPage';
 import PPackDPage from '../../pages/PPackDPage/PPackDPage';
 import PLeafsletPage from '../../pages/PLeafsletPage/PLeafsletPage';
+import PostsPage from '../../pages/PostsPage/PostsPage';
+import BlogPostPage from '../../pages/BlogPostPage/BlogPostPage';
 import { TransitionGroup } from 'react-transition-group';
 
 class Background extends React.Component {
@@ -62,6 +64,15 @@ class Background extends React.Component {
           )}/>
           <Route path='/project-leafslet' render={(props) => (
               <PLeafsletPage 
+                {...props}
+              />
+          )}/>
+          <Route 
+            path="/blog/:id"
+            render={props => <BlogPostPage {...props}/>}
+          />
+          <Route path='/blog' render={(props) => (
+              <PostsPage
                 {...props}
               />
           )}/>

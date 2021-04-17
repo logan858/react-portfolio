@@ -40,7 +40,7 @@ class MenuList extends React.Component {
                             </svg>
                         </div>
                     </Link>
-                    <NavFooter inputText={'footer'} userName={this.props.userName} userEmail={this.props.userEmail}/>
+                    <NavFooter inputText={'Blog'}/>
                 </div>
             )
             } else {
@@ -77,7 +77,7 @@ class MenuList extends React.Component {
                                 </svg>
                             </div>
                         </Link>
-                        <NavFooter inputText={'footer'} userName={this.props.userName} userEmail={this.props.userEmail}/>
+                        <NavFooter inputText={'Blog'}/>
                     </div>
                 )
             }

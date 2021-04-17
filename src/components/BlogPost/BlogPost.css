@@ -1,0 +1,12 @@
+.details {
+    grid-row: 2 / 4 ;
+    grid-column: 2 / 4;
+}
+.blog-name {
+    text-align: center;
+}
+.blog-button {
+    display: block;
+    width:auto;
+    margin: 0 0 auto auto;
+}

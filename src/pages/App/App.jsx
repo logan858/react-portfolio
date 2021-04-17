@@ -1,7 +1,7 @@
 import './App.css';
 import React, {Component} from 'react';
-import Background from './components/Background/Background';
-import ThemeButton from './components/ThemeButton/ThemeButton';
+import Background from '../../components/Background/Background';
+import ThemeButton from '../../components/ThemeButton/ThemeButton';
 
 class App extends Component {
   state = {
@@ -19,7 +19,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
+      <main>
         <Background 
           userName={this.state.userName} 
           userEmail={this.state.userEmail} 
@@ -35,7 +35,7 @@ class App extends Component {
           theme={this.state.theme} 
           color={this.state.color}
         />
-      </div>
+      </main>
     )
   }
 }

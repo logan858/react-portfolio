@@ -1,14 +1,18 @@
 import React from 'react';
 import './NavFooter.css'
+import { Link } from 'react-router-dom';
+
 
 class NavFooter extends React.Component {
     render() {
         return (
-            <div className="nav-footer">
-                {this.props.inputText}<br/>
-                {this.props.userName}
-                {this.props.userEmail}
-            </div>
+            <>
+            <Link to="/blog">
+                <div className="nav-footer">
+                    {this.props.inputText}<br/>
+                </div>
+            </Link>
+            </>
         )
     }
 }

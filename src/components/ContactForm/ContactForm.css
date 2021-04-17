@@ -1,0 +1,11 @@
+.contact-form-left {
+    border: black dotted 1px;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+.contact-form-right {
+    border: black dotted 1px;
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    
+}
