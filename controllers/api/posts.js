@@ -2,7 +2,8 @@ const Post = require('../../models/Post');
 module.exports = {
     index,
     create,
-    details
+    details,
+    deleteOne,
 }
 
 async function index(req, res) {
@@ -21,4 +22,11 @@ async function create(req, res) {
     Post.create(req.body, function(err, post) {
         res.status(200).json("success")
     }) 
+}
+
+async function deleteOne(req, res) {
+    Post.deleteOne({_id: req.params.id}, function(err, post) {
+        if(err) console.log(err);
+        res.status(204).json("success")
+    })
 }

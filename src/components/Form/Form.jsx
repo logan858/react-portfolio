@@ -5,6 +5,7 @@ export default class Form extends Component {
     state = {
         name: "",
         content: "",
+        topic: "",
     };
     handleSubmit = async () => {
         let body = { 
