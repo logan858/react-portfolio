@@ -32,7 +32,7 @@ class ContactForm extends React.Component {
         <div className="portfolio-frame">
             <div className="contact-form">
                 <form onSubmit={this.handleContact}>
-                    <label>
+                    <label className="contact-form-input">
                         <span>Name </span>
                         <input 
                             name="name"
@@ -40,7 +40,7 @@ class ContactForm extends React.Component {
                             onChange={this.handleChange}
                         />
                     </label><br/>
-                    <label>
+                    <label className="contact-form-input">
                         <span>Email </span>
                         <input 
                             name="email"
@@ -48,7 +48,7 @@ class ContactForm extends React.Component {
                             onChange={this.handleChange}
                         />
                     </label><br/>
-                    <label>
+                    <label className="contact-form-input">
                         <span>Message </span>
                         <textarea 
                             name="message"
@@ -58,7 +58,7 @@ class ContactForm extends React.Component {
                             cols="35"
                         />
                     </label><br/>
-                    <button onClick={this.handleContact}>Send</button>
+                    <button onClick={this.handleContact} className="contact-button">Send</button>
                 </form>
             </div>
             <div className="message-success">

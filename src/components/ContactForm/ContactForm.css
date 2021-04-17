@@ -1,6 +1,5 @@
 .contact-form {
     height: 100%;
-    border: 1px dotted black;
     grid-row: 2 / 3;
     grid-column: 2 / 4;
 }
@@ -8,4 +7,12 @@
     grid-row: 3 / 4;
     grid-column: 2 / 4;
     text-align: center;
+}
+.contact-form-input {
+    display: block;
+    text-align: center;
+}
+.contact-button {
+    display: block;
+    margin: 0 auto;
 }
