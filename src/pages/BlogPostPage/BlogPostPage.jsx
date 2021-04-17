@@ -4,7 +4,7 @@ import BlogPost from '../../components/BlogPost/BlogPost'
 class BlogPostPage extends React.Component {
     state = {
         matchID: this.props.match.params.id,
-        post: []
+        post: [],
     }
     getPost = async () => {
         await fetch(`/api/${this.state.matchID}`).then((res) => res.json()).then(data => this.setState({post: data}))
@@ -21,8 +21,6 @@ class BlogPostPage extends React.Component {
                     :
                     <h1>No post</h1>
                 }
-                
-                
             </div>
         )
     }

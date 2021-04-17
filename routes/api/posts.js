@@ -4,7 +4,8 @@ const postCtrl = require('../../controllers/api/posts');
 
 router.get('/:id', postCtrl.details)
 router.get('/', postCtrl.index)
+router.put('/:id', postCtrl.editOne)
 router.post('/', postCtrl.create)
-router.post('/delete/:id', postCtrl.deleteOne)
+router.delete('/delete/:id', postCtrl.deleteOne)
 
 module.exports = router;

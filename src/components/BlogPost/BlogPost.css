@@ -4,9 +4,13 @@
 }
 .blog-name {
     text-align: center;
+    font-style: italic;
 }
 .blog-button {
     display: block;
     width:auto;
     margin: 0 0 auto auto;
+}
+.blog-topic {
+    font-weight: bold;
 }

@@ -4,6 +4,7 @@ module.exports = {
     create,
     details,
     deleteOne,
+    editOne,
 }
 
 async function index(req, res) {
@@ -29,4 +30,19 @@ async function deleteOne(req, res) {
         if(err) console.log(err);
         res.status(204).json("success")
     })
+}
+
+function editOne(req, res) {
+    Post.findByIdAndUpdate(req.params.id, {
+        name: req.body.name,
+        topic: req.body.topic,
+        content: req.body.content,
+        }, function(err, post) {
+            if(err) {
+                res.send(err)
+            } else {
+                res.status(200).json("success") 
+            }
+        }
+    )   
 }
