@@ -15,6 +15,8 @@ class BlogPost extends Component {
         await fetch(`/api/delete/${id}`, 
         {method: "DELETE"}
         ).then(res => res.json())
+        .then(data => {console.log("Success: ", data)})
+        .catch(err => {console.log("Error: ", err)})
     }
     showEdit = () => {
         this.state.edit ?  

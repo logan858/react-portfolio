@@ -1,10 +1,13 @@
 const Post = require('../../models/Post');
+const Contact = require('../../models/Contact')
+
 module.exports = {
     index,
     create,
     details,
     deleteOne,
     editOne,
+    contact
 }
 
 async function index(req, res) {
@@ -45,4 +48,14 @@ function editOne(req, res) {
             }
         }
     )   
+}
+async function contact(req, res) {
+    await Contact.create({
+        email: req.body.email,
+        name: req.body.name,
+        message: req.body.message,
+    })
+    .then(
+        res.status(200).json("success")
+    )
 }

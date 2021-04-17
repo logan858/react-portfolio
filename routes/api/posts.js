@@ -6,6 +6,7 @@ router.get('/:id', postCtrl.details)
 router.get('/', postCtrl.index)
 router.put('/:id', postCtrl.editOne)
 router.post('/', postCtrl.create)
+router.post('/contact', postCtrl.contact)
 router.delete('/delete/:id', postCtrl.deleteOne)
 
 module.exports = router;
