@@ -1,4 +1,15 @@
 .nav-icon {
-    height: 10%;
-    border-bottom:rgba(27, 27, 27, 0.7) solid 3px;
-  }
+  height: 10%;
+  border-bottom:rgba(27, 27, 27, 0.7) solid 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-icon-container {
+  margin-left: -5%;
+  width: 34px;
+}
+.icon-svg {
+  transition: 0.7s;
+  width: 34px;
+}
