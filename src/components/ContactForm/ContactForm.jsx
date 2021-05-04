@@ -31,7 +31,7 @@ class ContactForm extends React.Component {
     }
     render() {
         return (
-        <div className="portfolio-frame">
+        <>
             <div className="contact-form">
                 <form onSubmit={this.handleContact}>
                     <label className="contact-form-input">
@@ -68,7 +68,7 @@ class ContactForm extends React.Component {
                     <h4>{this.state.contact}</h4>
                 }
             </div>
-        </div>
+        </>
         )
     }
 }

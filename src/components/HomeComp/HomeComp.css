@@ -1,0 +1,18 @@
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+  }
+
+.home-content {
+    color: rgb(243, 243, 243);
+    font-size: 36px;
+    font-weight: bold;
+}
+.home-subcontent {
+    text-align: center;
+    color: rgb(243, 243, 243);
+    font-size: 16px;
+    font-weight: normal;
+}

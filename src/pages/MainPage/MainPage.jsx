@@ -1,20 +1,19 @@
 import React from 'react';
-import './Background.css';
-import MenuList from '../MenuList/MenuList';
+import './MainPage.css';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import PortfolioPage from '../../pages/PortfolioPage/PortfolioPage'
-import HomePage from '../../pages/HomePage/HomePage'
-import ContactPage from '../../pages/ContactPage/ContactPage'
-import AboutPage from '../../pages/AboutPage/AboutPage';
-import PReactPage from '../../pages/PReactPage/PReactPage';
-import PSocketIOPage from '../../pages/PSocketIOPage/PSocketIOPage';
-import PPackDPage from '../../pages/PPackDPage/PPackDPage';
-import PLeafsletPage from '../../pages/PLeafsletPage/PLeafsletPage';
-import PostsPage from '../../pages/PostsPage/PostsPage';
-import BlogPostPage from '../../pages/BlogPostPage/BlogPostPage';
-import { TransitionGroup } from 'react-transition-group';
+import MenuList from '../../components/MenuList/MenuList';
+import HomeComp from '../../components/HomeComp/HomeComp.jsx';
+import PortfolioPage from '../PortfolioPage/PortfolioPage';
+import ContactPage from '../ContactPage/ContactPage';
+import AboutPage from '../AboutPage/AboutPage';
+import PReactPage from '../PReactPage/PReactPage';
+import PSocketIOPage from '../PSocketIOPage/PSocketIOPage';
+import PPackDPage from '../PPackDPage/PPackDPage';
+import PLeafsletPage from '../PLeafsletPage/PLeafsletPage';
+import PostsPage from '../PostsPage/PostsPage';
+import BlogPostPage from '../BlogPostPage/BlogPostPage';
 
-class Background extends React.Component {
+class Main extends React.Component {
   render() {
     return (
       <div className="container">
@@ -27,9 +26,7 @@ class Background extends React.Component {
         />
         <Switch>
           <Route path='/home' render={(props) => (
-              <HomePage 
-                {...props}
-              />
+               <HomeComp {...props}/>
           )}/>
           <Route path='/portfolio' render={(props) => (
               <PortfolioPage 
@@ -66,12 +63,24 @@ class Background extends React.Component {
               <PLeafsletPage 
                 {...props}
               />
+          )}/>+
+          <Route path='/blog/signup' render={(props) => (
+              <PostsPage
+                {...props}
+              />
+          )}/>
+           <Route path='/blog/login' render={(props) => (
+              <PostsPage
+                {...props}
+              />
           )}/>
           <Route 
             path="/blog/:id"
             render={props => <BlogPostPage {...props}/>}
           />
-          <Route path='/blog' render={(props) => (
+          <Route path='/blog' 
+          user={this.props.user}
+          render={(props) => (
               <PostsPage
                 {...props}
               />
@@ -83,4 +92,4 @@ class Background extends React.Component {
   }
 }
 
-export default Background;
+export default Main;

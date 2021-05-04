@@ -1,0 +1,9 @@
+.sign-up {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    right: 0;
+}
+.sign-up-input {
+    display: block;
+    right: 0;
+}

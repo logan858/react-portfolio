@@ -1,5 +1,3 @@
-import React from 'react'
-
 export function colorChooser() {
     let colors = "01234456789ABCDEF"
     let num = "#"

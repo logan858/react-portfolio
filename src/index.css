@@ -1,7 +1,20 @@
+@font-face {
+  font-family: "WaukeganLDO";
+  src: local("WaukeganLDO"),
+    url("../src/fonts/WaukeganLDO.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "TecnicoFino";
+  src: local("TecnicoFino"),
+    url("../src/fonts/TecnicoFino.ttf") format("truetype");
+  font-weight: normal;
+}
+
 html, body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, 'TecnicoFino', 'WaukeganLDO', 'AssistantRegular', 'Ubuntu', 'Segoe UI', 'Roboto', 'Oxygen',
+     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11,15 +24,6 @@ html, body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-.portfolio-frame {
-  margin: 5px 0 5px 11%;
-  height: 98%;
-  right: 0;
-  background-color: rgba(195, 195, 195, 0.2);
-  display: grid;
-  grid-template: 2fr 2fr 2fr 2fr / 1fr 2fr 2fr 1fr;
-  grid-gap: 20px;
 }
 a { 
   color: #59CAEF;
