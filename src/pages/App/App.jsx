@@ -40,7 +40,6 @@ class App extends Component {
           accentColor={this.state.accentColor}
           user={this.state.user}
         />
-        
         <ThemeButton 
           setTheme={theme=>{this.setState(theme)}} 
           setColor={color=>{this.setState(color)}} 
@@ -48,7 +47,6 @@ class App extends Component {
           theme={this.state.theme} 
           color={this.state.color}
         />
-        
       </main>
     )
   }

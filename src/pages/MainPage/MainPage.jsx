@@ -24,10 +24,8 @@ class Main extends React.Component {
             color={this.props.color}
             accentColor={this.props.accentColor}
         />
+        
         <Switch>
-          <Route path='/home' render={(props) => (
-               <HomeComp {...props}/>
-          )}/>
           <Route path='/portfolio' render={(props) => (
               <PortfolioPage 
                 portfolio={this.props.portfolio} 
@@ -84,6 +82,9 @@ class Main extends React.Component {
               <PostsPage
                 {...props}
               />
+          )}/>
+          <Route path={['/home', '/']} render={(props) => (
+               <HomeComp {...props}/>
           )}/>
           <Redirect to="/"/>
         </Switch>

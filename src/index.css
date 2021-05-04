@@ -13,7 +13,7 @@
 
 html, body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'TecnicoFino', 'WaukeganLDO', 'AssistantRegular', 'Ubuntu', 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'WaukeganLDO', 'TecnicoFino', 'AssistantRegular', 'Ubuntu', 'Segoe UI', 'Roboto', 'Oxygen',
      'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -26,5 +26,5 @@ code {
     monospace;
 }
 a { 
-  color: #59CAEF;
+  color: rgba(47, 47, 47, 0.9);
 }

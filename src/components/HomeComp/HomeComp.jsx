@@ -5,73 +5,50 @@ import { motion, AnimatePresence } from 'framer-motion';
 export default function HomeComp() {
     const [showTitle, setShowTitle] = useState(true)
     const [displayTitle, setDisplayTitle] = useState({newTitle: 'developer'})
-    const titles = ["developer", "designer", "engineer", "coder"]
+    const [count, setCount] = useState(1);
+
+    const titles = ["software developer", "designer", "software engineer", "fullstack"]
 
     useEffect(() => {
         const interval = setInterval(() => {
             let newTitle = titles[Math.floor(Math.random()*titles.length)] 
             setDisplayTitle({newTitle})
+            setCount(prevCount => prevCount + 1)
             setShowTitle(true)
-        }, 3000)
+        }, 2500)
         return () => clearInterval(interval);
     })
-
+    
     setTimeout(() => {
         setShowTitle(false)
     }, 2000)
 
-    // const randTitle = () => {
-    //     return titles[Math.floor(Math.random()*titles.length)];
-    // }
-
-    // const list = {
-    //     visible: {
-    //       opacity: 1,
-    //       transition: {
-    //         staggerChildren: 0.3
-    //       }
-    //     },
-    //     hidden: {
-    //       opacity: 0,
-    //     }
-    //   };
-    //   const item = {
-    //     visible: { opacity: 1, y: 0 },
-    //     hidden: { opacity: 0, y: 50 },
-    //   };
-
     return (
-        <div className ="home-container">  
-            <motion.div tansition={{repeat:Infinity, repeatType: "reverse",}} className="home-content">
-                logan major
-                
-            {/* <AnimatePresence>
-            {titles.map((item, index) => (
-             showTitle && 
-                <motion.div
-                    className="home-subcontent"
-                    initial={{opacity: 0}}
-                    animate={{opacity: 1, transition: {duration: 2}}}
-                    exit={{opacity: 0, transition: {duration: 2}}}
-                    key={index}
-                >     */}
+        <div className ="home-container"> 
+            <motion.div 
+                className="home-content"
+                animate={{ opacity: [null, 0.5, 1]}}
+                transition={{ duration: 5, time: [0, 0.5, 1], repeat: Infinity}}
+            >
+                logan j. major
+            </motion.div>
+            
+            <motion.div className="home-subcontent">
+                <span className="return-content">return  </span>
                 <AnimatePresence>
                     {showTitle &&
-                    <motion.div 
-                        className="home-subcontent"
-                        initial={{opacity: 0, y: 50}}
-                        animate={{opacity: 1, y: 0}}
-                        exit={{opacity: 0, y: -50}}
-                    >
-                        {displayTitle.newTitle}
-                    </motion.div>
+                        <motion.span
+                            className="return-title-content"
+                            key={count}
+                            initial={{opacity: 0}}
+                            animate={{opacity: 1}}
+                            exit={{opacity: 0}}
+                        >
+                            {displayTitle.newTitle}
+                        </motion.span>
                     }
                 </AnimatePresence>
-                
-                {/* </motion.div> */}
-{/*             
-            ))}        
-            </AnimatePresence> */}
+                <span className="return-close-content">&nbsp;)</span>
             </motion.div>
         </div>
     )

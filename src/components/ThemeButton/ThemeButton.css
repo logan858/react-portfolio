@@ -1,10 +1,16 @@
 #theme {
     position: absolute;
     right: 0;
-    top: 10%;
-    background-color: rgba(27, 27, 27, 0.3);
+    top: 8%;
+    background-color: rgba(27, 27, 27, 0.4);
     padding: 4px;
     border-top-left-radius: 6px;
     transition: 0.7s;
     cursor: pointer;
-  }
+    display: flex;
+}
+#theme svg {
+  fill: rgba(27, 27, 27, 0.7);
+  width: 20px;
+  height: 19px;
+}

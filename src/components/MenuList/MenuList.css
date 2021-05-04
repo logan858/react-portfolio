@@ -5,7 +5,6 @@
     width: 10%;
     height: 100%;
     background-color: rgba(47, 47, 47, 0.7);
-    color: #59CAEF;
     overflow: hidden;
     transition: 0.7s;
 }
@@ -13,9 +12,7 @@
   display: flex;
   width: 38px;
   margin: 30% auto;
-  /* border: black dotted 1px; */
   justify-content: center;
-  
 }
 .menu-list-svg {
   cursor: pointer;
@@ -23,7 +20,6 @@
   fill: white;
   transition: 0.7s;
 }
-.menu-list-svg:hover {
-  fill: rgba(27, 27, 27, 0.7);
-  margin-left: 10%;
-} 
+.focused {
+  fill: red;
+}

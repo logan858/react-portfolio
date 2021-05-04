@@ -1,17 +1,13 @@
-import { useEffect, useState } from 'react';
 import './NavIcon.css'
 import { colorChooser } from '../../servics/ColorChooser'
 import { motion } from 'framer-motion'
 
-function NavIcon() {
-    const [iconStyle, setIconStyle] = useState({
-        color: "white",
-    })
-   
-    useEffect(() => {
-        let newColor = colorChooser()
-        iconStyle.color = newColor;
-    })
+export default function NavIcon(props) {
+    
+    const iconColor = () => {
+        let randomColor = colorChooser()
+        props.newColor(randomColor)
+    }
 
     return (
         <div className="nav-icon">
@@ -23,8 +19,8 @@ function NavIcon() {
             > 
                 <svg 
                     height="32px" 
-                    style={{fill: iconStyle.color}}
-                    onClick={() => setIconStyle({color: iconStyle.color})}
+                    style={{fill: props.iconStyle}}
+                    onClick={() => iconColor()}
                     className="icon-svg"
                 > 
                     <path className="st0" d="M9.8,25c0,0,0.8-1.8,0.9-2.3c0.1-0.5-6.8-5.7-6.8-5.7s1.7-0.5,1.8-0.9C5.8,15.8,4.3,12,4.3,12s3.6,0.9,4,0.7
@@ -37,5 +33,3 @@ function NavIcon() {
         </div>
     )
 }
-
-export default NavIcon;
