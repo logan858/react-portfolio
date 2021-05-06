@@ -6,10 +6,10 @@ import ThemeButton from '../../components/ThemeButton/ThemeButton';
 class App extends Component {
   state = {
     userName: "",
-    userEmail: "place@holder.com",
+    userEmail: "",
     theme: "Dark",
-    color: "",
-    accentColor: "",
+    color: "rgba(47, 47, 47, 0.8)",
+    accentColor: "rgba(255, 255, 255, 0.4)",
     user: null,
     portfolio: [
       {id:0, name:"react-project", link:"url", category:"React"}, 
@@ -46,6 +46,7 @@ class App extends Component {
           setAccentColor={accentColor=>{this.setState(accentColor)}}
           theme={this.state.theme} 
           color={this.state.color}
+          accentColor={this.state.accentColor}
         />
       </main>
     )

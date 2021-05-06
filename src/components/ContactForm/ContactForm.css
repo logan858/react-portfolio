@@ -1,3 +1,10 @@
+#contact-welcome-message {
+    grid-row: 1 / 2;
+    grid-column: 2 / 4;
+    text-align: center;
+    align-self: center;
+    color: white;
+}
 .contact-form {
     height: 100%;
     grid-row: 2 / 3;
@@ -7,6 +14,7 @@
     grid-row: 3 / 4;
     grid-column: 2 / 4;
     text-align: center;
+    font-weight: normal;
 }
 .contact-form-input {
     display: block;
@@ -14,5 +22,39 @@
 }
 .contact-button {
     display: block;
+    padding: 5px 10px 5px 10px;
     margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: transparent;
+    text-transform: uppercase;
+    color: black;
+    font-family: 'WaukeganLDO';
+    letter-spacing: 2px;
+    transition: 0.7s;
+}
+.contact-button:hover {
+    border: 1px solid rgb(131, 131, 131);
+    color: rgb(131, 131, 131);
+    background-color: white;
+}
+input, textarea {
+    outline: none;
+    border-radius: 2px;
+    border: none;
+    resize: none;
+    width: 80%;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(47,47,47,0.4);
+  }
+::-webkit-scrollbar-track {
+    background: rgb(131, 131, 131);
+}
+::-webkit-scrollbar-thumb:hover {
+background: rgb(56, 56, 56);
 }

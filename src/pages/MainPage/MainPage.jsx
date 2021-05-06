@@ -29,11 +29,16 @@ class Main extends React.Component {
           <Route path='/portfolio' render={(props) => (
               <PortfolioPage 
                 portfolio={this.props.portfolio} 
+                color={this.props.color}
+                accentColor={this.props.accentColor}
                 {...props}
               />
           )}/>
           <Route path='/contact' render={(props) => (
               <ContactPage 
+                theme={this.props.theme}
+                color={this.props.color}
+                accentColor={this.props.accentColor}
                 {...props}
               />
           )}/>

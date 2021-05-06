@@ -11,3 +11,12 @@
   font-size: 40px;
   text-align: center;
 }
+.content-frame {
+  margin: 1.4% 0 1% 11%;
+  height: 98%;
+  right: 0;
+  display: grid;
+  grid-template: 2fr 2fr 2fr 2fr / 1fr 2fr 2fr 1fr;
+  grid-gap: 20px;
+  transition: 0.7s;
+}

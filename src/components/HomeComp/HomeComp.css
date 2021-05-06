@@ -18,6 +18,7 @@
 }
 .home-content:hover {
     color: rgb(131, 131, 131);
+    transition: 0.7s;
 }
 .home-subcontent {
     color: rgb(243, 243, 243);
@@ -35,6 +36,7 @@
 }
 span:hover { 
     color: rgb(131, 131, 131);
+    transition: 0.7s;
 }
 .return-content {
     grid-row: 1 / 2;

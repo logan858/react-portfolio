@@ -3,7 +3,7 @@ import React from 'react';
 class AboutPage extends React.Component {
     render() {
         return (
-            <div className="portfolio-frame">
+            <div className="content-frame">
                 About page!
             </div>
         )

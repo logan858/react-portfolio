@@ -1,9 +1,7 @@
 import React from 'react';
 import './ContactForm.css'
 
-
-
-class ContactForm extends React.Component {
+export default class ContactForm extends React.Component {
     state = {
         name: "",
         email: "",
@@ -21,7 +19,7 @@ class ContactForm extends React.Component {
         await fetch("/api/contact", options)
             .then(res=> res.json())
             .then(data => {
-                this.setState({name: "", email: "", message: "", contact: "Message Sent"})
+                this.setState({name: "", email: "", message: "", contact: "Message Sent Succesfully"})
             })
             .then(data => {console.log("Success: ", data)})
             .catch(err => {console.log("Error: ", err)})
@@ -29,48 +27,59 @@ class ContactForm extends React.Component {
     handleChange = (evnt) => {
         this.setState({ [evnt.target.name]: evnt.target.value})
     }
+
     render() {
         return (
         <>
+            <div id="contact-welcome-message">
+                Message from Logan: I'm always available to talk, don't hesitate to reach out!
+            </div>
             <div className="contact-form">
                 <form onSubmit={this.handleContact}>
                     <label className="contact-form-input">
-                        <span>Name </span>
+                        <span style={this.props.theme === "Dark" ? {color: 'rgb(131, 131, 131)'} : {color: 'black'}} onMouseOver={this.changeColor}>Name </span><br/>
                         <input 
                             name="name"
                             value={this.state.name}
                             onChange={this.handleChange}
+                            required
                         />
                     </label><br/>
                     <label className="contact-form-input">
-                        <span>Email </span>
+                        <span style={this.props.theme === "Dark" ? {color: 'rgb(131, 131, 131)'} : {color: 'black'}}>Email </span><br/>
                         <input 
                             name="email"
                             value={this.state.email}
                             onChange={this.handleChange}
+                            required
                         />
                     </label><br/>
                     <label className="contact-form-input">
-                        <span>Message </span>
+                        <span style={this.props.theme === "Dark" ? {color: 'rgb(131, 131, 131)'} : {color: 'black'}}>Message</span><br/>
                         <textarea 
                             name="message"
                             value={this.state.message}
                             onChange={this.handleChange}
                             rows="7"
                             cols="35"
+                            required
                         />
                     </label><br/>
-                    <button onClick={this.handleContact} className="contact-button">Send</button>
+                    <button 
+                        onClick={this.handleContact} 
+                        className="contact-button"
+                        style={this.props.theme === "Dark" ? {color: 'rgb(131, 131, 131)', borderColor: 'rgb(131, 131, 131)'} : {color: 'black'}}
+                    >
+                            Send
+                    </button>
                 </form>
             </div>
-            <div className="message-success">
+            <div style={this.props.theme === "Dark" ? {color: 'rgb(131, 131, 131)', borderColor: 'rgb(131, 131, 131)'} : {color: 'black'}} className="message-success">
                 {this.state.contact &&
-                    <h4>{this.state.contact}</h4>
+                    <span>{this.state.contact}</span>
                 }
             </div>
         </>
         )
     }
 }
-
-export default ContactForm;
