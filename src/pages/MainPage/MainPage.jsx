@@ -29,6 +29,7 @@ class Main extends React.Component {
           <Route path='/portfolio' render={(props) => (
               <PortfolioPage 
                 portfolio={this.props.portfolio} 
+                theme={this.props.theme}
                 color={this.props.color}
                 accentColor={this.props.accentColor}
                 {...props}
@@ -44,6 +45,9 @@ class Main extends React.Component {
           )}/>
           <Route path='/about' render={(props) => (
               <AboutPage 
+                theme={this.props.theme}
+                color={this.props.color}
+                accentColor={this.props.accentColor}
                 {...props}
               />
           )}/>

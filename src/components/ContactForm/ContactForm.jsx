@@ -27,17 +27,47 @@ export default class ContactForm extends React.Component {
     handleChange = (evnt) => {
         this.setState({ [evnt.target.name]: evnt.target.value})
     }
+    addColor = (evnt) => {
+        let elemnt = evnt.target
+        if(this.props.theme === 'Dark') {
+            elemnt.style.color = 'white'
+        } else {    
+            elemnt.style.color = 'rgb(131, 131, 131)'
+        }
+    }
+    removeColor = (evnt) => {
+        let elemnt = evnt.target
+        if(this.props.theme === 'Dark') {
+            elemnt.style.color = 'rgb(131, 131, 131)'
+        } else {    
+            elemnt.style.color = 'black'
+        }
+    }
 
     render() {
         return (
         <>
-            <div id="contact-welcome-message">
-                Message from Logan: I'm always available to talk, don't hesitate to reach out!
+            <div 
+                id="contact-welcome-message" 
+                style={this.props.theme === "Dark" ? {color: 'rgb(131, 131, 131)'} : {color: 'black'}} 
+                onMouseEnter={evnt => this.addColor(evnt)}
+                onMouseOut={evnt => this.removeColor(evnt)}
+            >
+                Heya, it's me, Logan,<br/> Always available to talk, don't hesitate to reach out!
             </div>
             <div className="contact-form">
-                <form onSubmit={this.handleContact}>
+                <form 
+                    onSubmit={this.handleContact}
+                    method="POST"
+                >
                     <label className="contact-form-input">
-                        <span style={this.props.theme === "Dark" ? {color: 'rgb(131, 131, 131)'} : {color: 'black'}} onMouseOver={this.changeColor}>Name </span><br/>
+                        <span 
+                            style={this.props.theme === "Dark" ? {color: 'rgb(131, 131, 131)'} : {color: 'black'}} 
+                            onMouseEnter={evnt => this.addColor(evnt)}
+                            onMouseOut={evnt => this.removeColor(evnt)}
+                        >
+                                Name 
+                        </span><br/>
                         <input 
                             name="name"
                             value={this.state.name}
@@ -46,7 +76,13 @@ export default class ContactForm extends React.Component {
                         />
                     </label><br/>
                     <label className="contact-form-input">
-                        <span style={this.props.theme === "Dark" ? {color: 'rgb(131, 131, 131)'} : {color: 'black'}}>Email </span><br/>
+                        <span 
+                            onMouseEnter={evnt => this.addColor(evnt)}
+                            onMouseOut={evnt => this.removeColor(evnt)}
+                            style={this.props.theme === "Dark" ? {color: 'rgb(131, 131, 131)'} : {color: 'black'}}
+                        >
+                            Email 
+                        </span><br/>
                         <input 
                             name="email"
                             value={this.state.email}
@@ -55,7 +91,13 @@ export default class ContactForm extends React.Component {
                         />
                     </label><br/>
                     <label className="contact-form-input">
-                        <span style={this.props.theme === "Dark" ? {color: 'rgb(131, 131, 131)'} : {color: 'black'}}>Message</span><br/>
+                        <span 
+                            onMouseEnter={evnt => this.addColor(evnt)}
+                            onMouseOut={evnt => this.removeColor(evnt)}
+                            style={this.props.theme === "Dark" ? {color: 'rgb(131, 131, 131)'} : {color: 'black'}}
+                        >
+                            Message
+                        </span><br/>
                         <textarea 
                             name="message"
                             value={this.state.message}
@@ -66,7 +108,7 @@ export default class ContactForm extends React.Component {
                         />
                     </label><br/>
                     <button 
-                        onClick={this.handleContact} 
+                        type="submit"
                         className="contact-button"
                         style={this.props.theme === "Dark" ? {color: 'rgb(131, 131, 131)', borderColor: 'rgb(131, 131, 131)'} : {color: 'black'}}
                     >
@@ -74,9 +116,15 @@ export default class ContactForm extends React.Component {
                     </button>
                 </form>
             </div>
-            <div style={this.props.theme === "Dark" ? {color: 'rgb(131, 131, 131)', borderColor: 'rgb(131, 131, 131)'} : {color: 'black'}} className="message-success">
+            <div className="message-success">
                 {this.state.contact &&
-                    <span>{this.state.contact}</span>
+                    <span 
+                        style={this.props.theme === "Dark" ? {color: 'rgb(131, 131, 131)', borderColor: 'rgb(131, 131, 131)'} : {color: 'black'}} 
+                        onMouseEnter={evnt => this.addColor(evnt)}
+                        onMouseOut={evnt => this.removeColor(evnt)}
+                    >
+                        {this.state.contact}
+                    </span>
                 }
             </div>
         </>

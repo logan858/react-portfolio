@@ -12,10 +12,10 @@ class App extends Component {
     accentColor: "rgba(255, 255, 255, 0.4)",
     user: null,
     portfolio: [
-      {id:0, name:"react-project", link:"url", category:"React"}, 
-      {id:1, name:"socketio-project", link:"url", category:"socket.io"}, 
-      {id:2, name:"packd", link:"url", category:"Django, Python"}, 
-      {id:3, name:"leafslet", link:"url", category:"React, SQL"}, 
+      {id:0, name:"react-project", link:"url", category:"React", pic:"www.tinyimg.com"}, 
+      {id:1, name:"socketio-project", link:"url", category:"socket.io", pic:"www.tinyimg.com"}, 
+      {id:2, name:"packd", link:"url", category:"Django, Python", pic:"www.tinyimg.com"}, 
+      {id:3, name:"leafslet", link:"url", category:"React, SQL", pic:"www.tinyimg.com"}, 
     ],
   }
   setUserInState = (incomingUserData) => {

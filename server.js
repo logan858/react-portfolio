@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+const nodemailer = require('nodemailer');
 require('dotenv').config()
 require('./config/database')
 
@@ -14,8 +15,6 @@ app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
 const port = process.env.PORT || 3001;
-
-app.use('/api/users', require('./routes/api/users'));
 
 app.use("/api", require("./routes/api/posts"))
 app.get('/*', function(req, res) {

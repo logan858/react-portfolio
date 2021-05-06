@@ -15,10 +15,10 @@
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    transition: 0.7s;
 }
 .home-content:hover {
     color: rgb(131, 131, 131);
-    transition: 0.7s;
 }
 .home-subcontent {
     color: rgb(243, 243, 243);
@@ -34,15 +34,18 @@
     -moz-user-select: none;
     -ms-user-select: none;
 }
+span {
+    transition: 0.7s;
+}
 span:hover { 
     color: rgb(131, 131, 131);
-    transition: 0.7s;
 }
 .return-content {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
     text-align: right;
     font-size: 12px;
+    letter-spacing: 1.5px;
 }
 .return-content::after {
     content: "(";

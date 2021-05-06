@@ -1,18 +1,15 @@
 const Post = require('../../models/Post');
-const Contact = require('../../models/Contact')
+let nodeMail = require("nodemailer")
 
 module.exports = {
     index,
-    create,
     details,
-    deleteOne,
-    editOne,
     contact
 }
 
-async function index(req, res) {
+function index(req, res) {
    Post.find({}, function(err, posts) {
-       res.json(posts)
+       res.json(posts).status(200)
    })
 }
 
@@ -22,40 +19,26 @@ async function details(req, res) {
     })
  }
 
-async function create(req, res) {
-    Post.create(req.body, function(err, post) {
-        res.status(200).json("success")
-    }) 
-}
-
-async function deleteOne(req, res) {
-    Post.deleteOne({_id: req.params.id}, function(err, post) {
-        if(err) console.log(err);
-        res.status(204).json("success")
-    })
-}
-
-function editOne(req, res) {
-    Post.findByIdAndUpdate(req.params.id, {
-        name: req.body.name,
-        topic: req.body.topic,
-        content: req.body.content,
-        }, function(err, post) {
-            if(err) {
-                res.send(err)
-            } else {
-                res.status(200).json("success") 
-            }
-        }
-    )   
-}
 async function contact(req, res) {
-    await Contact.create({
-        email: req.body.email,
-        name: req.body.name,
-        message: req.body.message,
+    const transporter = nodeMail.createTransport({
+        service: 'gmail',
+        auth: {
+            user: process.env.EMAILROUTE,
+            pass: process.env.EMAILBUDDY
+        }
     })
-    .then(
-        res.status(200).json("success")
-    )
+    const mailOptions = {
+        from: `${req.body.email}`,
+        to: process.env.EMAILROUTE,
+        subject: `${req.body.name}`,
+        text: `${req.body.message}`,
+        replyTo: `${req.body.email}`
+    }
+    transporter.sendMail(mailOptions, (err, data) => {
+        if(err) {
+            res.json({status: 'fail'}).status(400)
+        } else {
+            res.json({status: 'success'}).status(200)
+        }
+    })
 }
