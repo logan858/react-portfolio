@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import PortfolioItem from '../../components/PortfolioItem/PortfolioItem'
-import './PortfolioPage.css';
 
 export default function PortfolioPage(props) {
     const [portItems, setPortItems] = useState([])
@@ -12,22 +11,20 @@ export default function PortfolioPage(props) {
     }
 
     useEffect(() => {
-        console.log("loop")
         getPorts()
-        console.log(portItems)
-        return () => console.log("meow")
     }, [])
-    console.log(portItems)
+    console.log(portItems.data)
     return (
         <div 
             className="content-frame"
             style={{backgroundColor: props.color}}    
         >
-            {props.portfolio.map(port =>
+            {portItems.data && portItems.data.map((port, index) =>
                 <PortfolioItem 
-                    key={port.name} 
+                    key={index}
+                    idName={index} 
                     name={port.name} 
-                    category={port.category} 
+                    category={port.technologies} 
                     link={port.link}
                     pic={port.pic}
                 />

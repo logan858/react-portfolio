@@ -1,4 +1,5 @@
 const Post = require('../../models/Post');
+const Portfolio = require('../../models/Portfolio')
 let nodeMail = require("nodemailer")
 
 module.exports = {
@@ -8,7 +9,7 @@ module.exports = {
 }
 
 function index(req, res) {
-   Post.find({}, function(err, posts) {
+   Portfolio.find({}, function(err, posts) {
        res.json(posts).status(200)
    })
 }
