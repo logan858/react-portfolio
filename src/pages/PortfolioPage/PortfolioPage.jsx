@@ -13,7 +13,7 @@ export default function PortfolioPage(props) {
     useEffect(() => {
         getPorts()
     }, [])
-    console.log(portItems.data)
+    
     return (
         <div 
             className="content-frame"
