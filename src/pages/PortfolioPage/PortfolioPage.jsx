@@ -13,7 +13,7 @@ export default function PortfolioPage(props) {
     useEffect(() => {
         getPorts()
     }, [])
-    
+
     return (
         <div 
             className="content-frame"
@@ -27,6 +27,8 @@ export default function PortfolioPage(props) {
                     category={port.technologies} 
                     link={port.link}
                     pic={port.pic}
+                    github={port.github}
+                    theme={props.theme}
                 />
             )}
         </div>

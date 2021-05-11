@@ -38,7 +38,7 @@ export default class ContactForm extends React.Component {
     removeColor = (evnt) => {
         let elemnt = evnt.target
         if(this.props.theme === 'Dark') {
-            elemnt.style.color = 'rgb(131, 131, 131)'
+            elemnt.style.color = 'rgb(171, 171, 171)'
         } else {    
             elemnt.style.color = 'black'
         }
@@ -49,7 +49,7 @@ export default class ContactForm extends React.Component {
         <>
             <div 
                 id="contact-welcome-message" 
-                style={this.props.theme === "Dark" ? {color: 'rgb(131, 131, 131)'} : {color: 'black'}} 
+                style={this.props.theme === "Dark" ? {color: 'rgb(171, 171, 171)'} : {color: 'black'}} 
                 onMouseEnter={evnt => this.addColor(evnt)}
                 onMouseOut={evnt => this.removeColor(evnt)}
             >
@@ -62,7 +62,7 @@ export default class ContactForm extends React.Component {
                 >
                     <label className="contact-form-input">
                         <span 
-                            style={this.props.theme === "Dark" ? {color: 'rgb(131, 131, 131)'} : {color: 'black'}} 
+                            style={this.props.theme === "Dark" ? {color: 'rgb(171, 171, 171)'} : {color: 'black'}} 
                             onMouseEnter={evnt => this.addColor(evnt)}
                             onMouseOut={evnt => this.removeColor(evnt)}
                         >
@@ -79,7 +79,7 @@ export default class ContactForm extends React.Component {
                         <span 
                             onMouseEnter={evnt => this.addColor(evnt)}
                             onMouseOut={evnt => this.removeColor(evnt)}
-                            style={this.props.theme === "Dark" ? {color: 'rgb(131, 131, 131)'} : {color: 'black'}}
+                            style={this.props.theme === "Dark" ? {color: 'rgb(171, 171, 171)'} : {color: 'black'}}
                         >
                             Email 
                         </span><br/>
@@ -94,7 +94,7 @@ export default class ContactForm extends React.Component {
                         <span 
                             onMouseEnter={evnt => this.addColor(evnt)}
                             onMouseOut={evnt => this.removeColor(evnt)}
-                            style={this.props.theme === "Dark" ? {color: 'rgb(131, 131, 131)'} : {color: 'black'}}
+                            style={this.props.theme === "Dark" ? {color: 'rgb(171, 171, 171)'} : {color: 'black'}}
                         >
                             Message
                         </span><br/>
@@ -110,7 +110,7 @@ export default class ContactForm extends React.Component {
                     <button 
                         type="submit"
                         className="contact-button"
-                        style={this.props.theme === "Dark" ? {color: 'rgb(131, 131, 131)', borderColor: 'rgb(131, 131, 131)'} : {color: 'black'}}
+                        style={this.props.theme === "Dark" ? {color: 'rgb(171, 171, 171)', borderColor: 'rgb(171, 171, 171)'} : {color: 'black'}}
                     >
                             Send
                     </button>

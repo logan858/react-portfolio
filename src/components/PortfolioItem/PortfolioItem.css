@@ -1,7 +1,15 @@
 .portfolio-item {
     width: 100%;
     height: 100%;
-    background-color: rgba(195, 195, 195, 0.7);
+    background-color: rgba(195, 195, 195, 0.1);
+    transition: 0.7s;
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.portfolio-item::-webkit-scrollbar {
+    display: none;
+    width: 4px;
 }
 #one-port {
     grid-row: 1 / 3;
@@ -13,7 +21,6 @@
     padding: 5px;
     border-radius: 2px;
     word-wrap: break-word;
-    overflow-y: scroll;
 }
 #two-port {
     grid-row: 1 / 3;
@@ -25,7 +32,6 @@
     padding: 5px;
     border-radius: 2px;
     word-wrap: break-word;
-    overflow-y: scroll;
 }
 #three-port {
     grid-row: 3 / 5;
@@ -37,7 +43,6 @@
     padding: 5px;
     border-radius: 2px;
     word-wrap: break-word;
-    overflow-y: scroll;
 }
 #four-port {
     grid-row: 3 / 5;
@@ -49,13 +54,34 @@
     padding: 5px;
     border-radius: 2px;
     word-wrap: break-word;
-    overflow-y: scroll;
 }
 .port-pics-container {
     height: 200px;
     max-width: 100%;
     background: no-repeat center;
-    background-position: 95% 5% 1%;
+    background-position: 50% 40%;
     border-radius: 4px;
-    padding: 2px;
+    margin: 0 5px 0 5px;
+    opacity: 0.8;
+}
+.port-text-content {
+    margin-top: 5px;
+    transition: 0.7s;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+.port-dev-icons>p>svg {
+    display: inline-block;
+    width: 32px;
+    height:32px;
+}
+.port-dev-icons>p>svg>path {
+    transition: 0.7s;
+}
+.port-github-link {
+    margin: 5px 25% 0 25%;
+    border-top: 1px solid rgba(47, 47, 47, 0.7);
+}
+.port-github-link a svg path {
+    transition: 0.7s;
 }

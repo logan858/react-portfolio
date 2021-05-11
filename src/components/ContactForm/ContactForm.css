@@ -47,15 +47,15 @@ input, textarea {
     width: 80%;
 }
 
-::-webkit-scrollbar {
+textarea::-webkit-scrollbar {
     width: 8px;
 }
-::-webkit-scrollbar-thumb {
+textarea::-webkit-scrollbar-thumb {
     background: rgba(47,47,47,0.4);
-  }
-::-webkit-scrollbar-track {
-    background: rgb(131, 131, 131);
 }
-::-webkit-scrollbar-thumb:hover {
+textarea::-webkit-scrollbar-track {
+    background: rgba(131, 131, 131, 0.3);
+}
+textarea::-webkit-scrollbar-thumb:hover {
     background: rgb(56, 56, 56);
 }

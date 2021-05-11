@@ -9,7 +9,7 @@ export default function ThemeButton(props) {
             props.setAccentColor({accentColor: "rgba(47, 47, 47, 0.9)"})
         } else {
             props.setTheme({theme: "Dark"})
-            props.setColor({color: "rgba(47, 47, 47, 0.8)"})
+            props.setColor({color: "rgba(10, 10, 10, 0.9)"})
             props.setAccentColor({accentColor: "rgba(255, 255, 255, 0.4)"})
         }
     }

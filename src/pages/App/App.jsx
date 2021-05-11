@@ -8,7 +8,7 @@ class App extends Component {
     userName: "",
     userEmail: "",
     theme: "Dark",
-    color: "rgba(47, 47, 47, 0.8)",
+    color: "rgba(10, 10, 10, 0.9)",
     accentColor: "rgba(255, 255, 255, 0.4)",
     user: null,
     portfolio: [

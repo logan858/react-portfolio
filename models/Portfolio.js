@@ -5,7 +5,8 @@ const portfolioSchema = new Schema({
     name: {},
     technologies: {},
     link: {},
-    pic: {}
+    pic: {},
+    github: {}
   },{
     timestamps: true,
   }
