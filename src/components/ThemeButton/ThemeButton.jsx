@@ -4,19 +4,19 @@ import { motion } from "framer-motion";
 export default function ThemeButton(props) {
     const handleTheme = () => {
         if(props.theme === "Dark") {
-            props.setTheme({theme: "Light"})
-            props.setColor({color: "rgba(255, 255, 255, 0.8)"})
-            props.setAccentColor({accentColor: "rgba(47, 47, 47, 0.9)"})
+            props.setTheme("Light")
+            props.setColor("rgba(255, 255, 255, 0.8)")
+            props.setAccentColor("rgba(47, 47, 47, 0.9)")
         } else {
-            props.setTheme({theme: "Dark"})
-            props.setColor({color: "rgba(10, 10, 10, 0.9)"})
-            props.setAccentColor({accentColor: "rgba(255, 255, 255, 0.4)"})
+            props.setTheme("Dark")
+            props.setColor("rgba(10, 10, 10, 0.9)")
+            props.setAccentColor("rgba(255, 255, 255, 0.4)")
         }
     }
 
     return (
         <div>
-            <div onClick={() => handleTheme()} id="theme" style={props.theme === "Dark" ?{backgroundColor: 'rgba(255, 255, 255, 0.2)'} : {backgroundColor: 'rgba(47, 47, 47, 0.1)'}}>
+            <div onClick={() => handleTheme()} id="theme" style={props.theme === "Dark" ?{backgroundColor: 'rgba(47, 47, 47, 0.8)'} : {backgroundColor: 'rgb(232, 220, 210)'}}>
                 <motion.svg 
                     initial={{ rotate: 0 }}
                     animate={{rotate: 360}}
@@ -26,7 +26,7 @@ export default function ThemeButton(props) {
                         repeat: Infinity,
                     }}
                 >
-                    <path id="theme-button-path" fill={props.theme === 'Light' ? 'rgba(47, 47, 47, 0.5)' : 'rgba(255, 255, 255, 0.4)'} d="M10.7,19.3c-0.3,0-0.5-0.2-0.6-0.4l-0.5-1.9c-0.9-0.1-1.8-0.3-2.6-0.7l-1.4,1.4c-0.2,0.2-0.6,0.2-0.8,0
+                    <path id="theme-button-path" fill={props.theme === 'Light' ? 'rgba(47, 47, 47, 0.9)' : 'rgba(255, 255, 255, 0.6)'} d="M10.7,19.3c-0.3,0-0.5-0.2-0.6-0.4l-0.5-1.9c-0.9-0.1-1.8-0.3-2.6-0.7l-1.4,1.4c-0.2,0.2-0.6,0.2-0.8,0
                         l-2.5-2.5c-0.2-0.2-0.2-0.6,0-0.8l1.4-1.4c-0.2-0.4-0.4-0.8-0.5-1.3C3.1,11.2,3,10.7,3,10.3L1.1,9.8c-0.2,0-0.3-0.1-0.4-0.3
                         C0.6,9.4,0.6,9.2,0.7,9.1l0.9-3.4c0-0.2,0.1-0.3,0.3-0.4C2,5.3,2.1,5.2,2.3,5.3l1.9,0.5C4.7,5,5.3,4.4,6.1,3.9L5.6,2
                         C5.5,1.6,5.7,1.3,6,1.2l3.4-0.9c0.3-0.1,0.6,0.1,0.7,0.4l0.5,1.9c0.9,0.1,1.8,0.3,2.6,0.7L14.6,2c0.2-0.2,0.6-0.2,0.8,0l2.5,2.5

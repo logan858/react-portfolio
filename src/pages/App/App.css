@@ -12,8 +12,8 @@
   text-align: center;
 }
 .content-frame {
-  margin: 1.4% 0 1% 11%;
-  height: 98%;
+  margin: 0 0 0 10%;
+  height: 100%;
   right: 0;
   display: grid;
   grid-template: 2fr 2fr 2fr 2fr / 1fr 2fr 2fr 1fr;

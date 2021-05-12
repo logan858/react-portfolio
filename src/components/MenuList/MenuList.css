@@ -4,7 +4,6 @@
     bottom: 0;
     width: 10%;
     height: 100%;
-    background-color: rgba(10, 10, 10, 0.9);
     overflow: hidden;
     transition: 0.7s;
 }

@@ -1,9 +1,0 @@
-.login {
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-    right: 0;
-}
-.login-input {
-    display: block;
-    right: 0;
-}

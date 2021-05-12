@@ -1,6 +1,6 @@
 import './HomeComp.css';
 import {useState, useEffect} from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export default function HomeComp() {
     const [showTitle, setShowTitle] = useState(true)
@@ -24,7 +24,22 @@ export default function HomeComp() {
     }, 2000)
 
     return (
-        <div className ="home-container"> 
+        <motion.div 
+            className ="home-container"
+            initial={{ opacity: 0}}
+            animate={{ 
+                opacity: 1, 
+                transition: {
+                    duration: 0.5
+                }
+            }}   
+            exit={{  
+                opacity: 0, 
+                transition: {
+                    duration: 0.5
+                }
+            }} 
+        > 
             <motion.div 
                 className="home-content"
                 animate={{ opacity: [null, 0.5, 1]}}
@@ -35,7 +50,7 @@ export default function HomeComp() {
             
             <motion.div className="home-subcontent">
                 <span className="return-content">return  </span>
-                <AnimatePresence>
+                
                     {showTitle &&
                         <motion.span
                             className="return-title-content"
@@ -47,9 +62,9 @@ export default function HomeComp() {
                             {displayTitle.newTitle}
                         </motion.span>
                     }
-                </AnimatePresence>
+                
                 <span className="return-close-content">&nbsp;)</span>
             </motion.div>
-        </div>
+        </motion.div>
     )
 }

@@ -1,0 +1,33 @@
+#about-me-intro {
+    text-align: center;
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    transition: 0.7s;
+    margin-top: 20%;
+    margin-bottom: 5%;
+}
+#about-me-pic {
+    border-radius: 35%;
+}
+#about-me-body {
+    text-align: center;
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    transition: 0.7s;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+#about-me-footer {
+    text-align: center;
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    transition: 0.7s;
+}
+#about-me-footer>a>svg {
+    height: 32px;
+    width: 32px;
+    margin: 10px;
+}
+.about-me-icons {
+    transition: 0.7s;
+}

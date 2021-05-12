@@ -52,6 +52,7 @@ export default function PortfolioItem(props){
         <div 
             id={idNames[props.idName]}
             className="portfolio-item"
+            style={props.theme === "Dark" ? {backgroundColor: "rgba(195, 195, 195, 0.1)"} : {backgroundColor: "rgba(232, 220, 210, 0.5)"}}
         >
             <div>
                 <br/>

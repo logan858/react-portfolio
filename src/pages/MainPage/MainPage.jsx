@@ -1,105 +1,57 @@
 import React from 'react';
 import './MainPage.css';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect, useLocation } from 'react-router-dom';
 import MenuList from '../../components/MenuList/MenuList';
 import HomeComp from '../../components/HomeComp/HomeComp.jsx';
 import PortfolioPage from '../PortfolioPage/PortfolioPage';
 import ContactPage from '../ContactPage/ContactPage';
 import AboutPage from '../AboutPage/AboutPage';
-import PReactPage from '../PReactPage/PReactPage';
-import PSocketIOPage from '../PSocketIOPage/PSocketIOPage';
-import PPackDPage from '../PPackDPage/PPackDPage';
-import PLeafsletPage from '../PLeafsletPage/PLeafsletPage';
-import PostsPage from '../PostsPage/PostsPage';
-import BlogPostPage from '../BlogPostPage/BlogPostPage';
+import { AnimatePresence } from 'framer-motion';
 
-class Main extends React.Component {
-  render() {
-    return (
-      <div className="container">
-        <MenuList 
-            username={this.props.userName} 
-            userEmail={this.props.userEmail} 
-            theme={this.props.theme}
-            color={this.props.color}
-            accentColor={this.props.accentColor}
-        />
-        
-        <Switch>
-          <Route path='/portfolio' render={(props) => (
+export default function Main(props) {
+  const location = useLocation();
+  return (
+    <div className="container">
+      <MenuList 
+          username={props.userName} 
+          userEmail={props.userEmail} 
+          theme={props.theme}
+          color={props.color}
+          accentColor={props.accentColor}
+      />
+      <AnimatePresence initial={false} exitBeforeEnter onExitComplete={() => console.log("exit")}>
+        <Switch location={location} key={location.pathname}>
+          <Route path='/portfolio' render={() => (
               <PortfolioPage 
-                portfolio={this.props.portfolio} 
-                theme={this.props.theme}
-                color={this.props.color}
-                accentColor={this.props.accentColor}
+                portfolio={props.portfolio} 
+                theme={props.theme}
+                color={props.color}
+                accentColor={props.accentColor}
                 {...props}
               />
           )}/>
-          <Route path='/contact' render={(props) => (
+          <Route path='/contact' render={() => (
               <ContactPage 
-                theme={this.props.theme}
-                color={this.props.color}
-                accentColor={this.props.accentColor}
+                theme={props.theme}
+                color={props.color}
+                accentColor={props.accentColor}
                 {...props}
               />
           )}/>
-          <Route path='/about' render={(props) => (
+          <Route path='/about' render={() => (
               <AboutPage 
-                theme={this.props.theme}
-                color={this.props.color}
-                accentColor={this.props.accentColor}
+                theme={props.theme}
+                color={props.color}
+                accentColor={props.accentColor}
                 {...props}
               />
           )}/>
-          <Route path='/project-react-project' render={(props) => (
-              <PReactPage 
-              {...props}
-              />
-          )}/>
-          <Route path='/project-socketio-project' render={(props) => (
-              <PSocketIOPage 
-                {...props}
-              />
-          )}/>
-          <Route path='/project-packd' render={(props) => (
-              <PPackDPage 
-                {...props}
-              />
-          )}/>
-          <Route path='/project-leafslet' render={(props) => (
-              <PLeafsletPage 
-                {...props}
-              />
-          )}/>+
-          <Route path='/blog/signup' render={(props) => (
-              <PostsPage
-                {...props}
-              />
-          )}/>
-           <Route path='/blog/login' render={(props) => (
-              <PostsPage
-                {...props}
-              />
-          )}/>
-          <Route 
-            path="/blog/:id"
-            render={props => <BlogPostPage {...props}/>}
-          />
-          <Route path='/blog' 
-          user={this.props.user}
-          render={(props) => (
-              <PostsPage
-                {...props}
-              />
-          )}/>
-          <Route path={['/home', '/']} render={(props) => (
-               <HomeComp {...props}/>
+          <Route path={['/home', '/']} render={() => (
+              <HomeComp {...props}/>
           )}/>
           <Redirect to="/"/>
         </Switch>
-      </div>
-    )
-  }
+      </AnimatePresence>
+    </div>
+  )
 }
-
-export default Main;

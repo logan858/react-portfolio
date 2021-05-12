@@ -1,13 +1,27 @@
 import React from 'react';
+import { motion } from 'framer-motion'
+import AboutComp from '../../components/AboutComp/AboutComp'
 
-class AboutPage extends React.Component {
-    render() {
-        return (
-            <div className="content-frame">
-                About page!
-            </div>
-        )
-    }
+export default function AboutPage(props) {
+    return (
+        <motion.div 
+            initial={{ x: 8000}}
+            animate={{ 
+                x: 0, 
+                transition: {
+                    duration: 0.5,
+                }
+            }}   
+            exit={{  
+                x: 8000, 
+                transition: {
+                    duration: 0.5
+                }
+            }} 
+            className="content-frame"
+            style={props.theme === "Dark" ? { borderLeft: 'rgba(47, 47, 47, 0.3) dashed 1px', backgroundColor: props.color} : { borderLeft: 'rgba(27, 27, 27, 0.1) dashed 1px', backgroundColor: props.color}}
+        >
+            <AboutComp theme={props.theme}/>
+        </motion.div>
+    )
 }
-
-export default AboutPage;
