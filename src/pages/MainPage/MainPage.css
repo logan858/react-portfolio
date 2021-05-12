@@ -1,5 +1,4 @@
 .container {
-  background-image: url("./bg-images/TRINI3.JPG");
   background-size: cover;
   background-position: 0 100%;
   position: fixed;
@@ -7,5 +6,6 @@
   bottom: 0;
   left: 0;
   right: 0;
+  transition: 0.7s;
 }
   

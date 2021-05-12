@@ -22,7 +22,6 @@ export default function MenuList(props) {
                     newColor={x => setIconStyle(x)}
                     iconStyle={iconStyle}
                     theme={props.theme}
-                    accentColor={props.accentColor}
                 />
                 <Link to='/home'>
                     <div className="icon-container">
@@ -75,8 +74,11 @@ export default function MenuList(props) {
                     </div>
                 </Link>
                 <NavFooter 
-                    inputText={'Blog'}
+                    iconStyle={iconStyle}
                     theme={props.theme}
+                    index={props.index}
+                    setIndex={props.setIndex}
+                    backgrounds={props.backgrounds}
                 />
             </div>
         )
@@ -87,7 +89,6 @@ export default function MenuList(props) {
                     newColor={x => setIconStyle(x)}
                     iconStyle={iconStyle}
                     theme={props.theme}
-                    accentColor={props.accentColor}
                 />
                 <Link to='/home'>
                     <div className="icon-container">
@@ -140,8 +141,11 @@ export default function MenuList(props) {
                     </div>
                 </Link>
                 <NavFooter 
-                    inputText={'Blog'}
+                    iconStyle={iconStyle}
                     theme={props.theme}
+                    index={props.index}
+                    setIndex={props.setIndex}
+                    backgrounds={props.backgrounds}
                 />
             </div>
         )

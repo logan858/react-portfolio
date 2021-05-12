@@ -19,17 +19,17 @@ export default function PortfolioPage(props) {
         <motion.div 
             className="content-frame"
             style={props.theme === "Dark" ? { borderLeft: 'rgba(47, 47, 47, 0.3) dashed 1px', backgroundColor: props.color} : { borderLeft: 'rgba(27, 27, 27, 0.1) dashed 1px', backgroundColor: props.color}}
-            initial={{ x: 7000}}
+            initial={{ x: 8000}}
             animate={{ 
                 x: 0, 
                 transition: {
-                    duration: 0.5
+                    duration: 0.35
                 }
             }}   
             exit={{  
-                x: 7000, 
+                x: 8000, 
                 transition: {
-                    duration: 0.5
+                    duration: 0.35
                 }
             }} 
         >

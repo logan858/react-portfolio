@@ -9,13 +9,13 @@ export default function ContactPage(props) {
             animate={{ 
                 x: 0, 
                 transition: {
-                    duration: 0.5,
+                    duration: 0.35,
                 }
             }}   
             exit={{  
                 x: 8000, 
                 transition: {
-                    duration: 0.5
+                    duration: 0.35
                 }
             }} 
             className="content-frame"

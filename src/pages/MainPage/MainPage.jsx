@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './MainPage.css';
 import { Route, Switch, Redirect, useLocation } from 'react-router-dom';
 import MenuList from '../../components/MenuList/MenuList';
@@ -10,16 +10,34 @@ import { AnimatePresence } from 'framer-motion';
 
 export default function Main(props) {
   const location = useLocation();
+  const [backgrounds, setBackgrounds] = useState([])
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    setBackgrounds([`url("/images/bg-images/TRINI3.JPG")`, `url("/images/bg-images/TRINI2.JPG")`, `url("/images/bg-images/TIMMINS.JPG")`, `url("/images/bg-images/NY2.JPG")`])
+  }, [])
+
+  const bgChooser = () => {
+    let i = index
+    return backgrounds[i]
+  }
+  
   return (
-    <div className="container">
+    <div 
+      className="container"
+      style={{backgroundImage: `${bgChooser()}`}}
+    >
       <MenuList 
           username={props.userName} 
           userEmail={props.userEmail} 
           theme={props.theme}
           color={props.color}
           accentColor={props.accentColor}
+          index={index}
+          setIndex={setIndex}
+          backgrounds={backgrounds}
       />
-      <AnimatePresence initial={false} exitBeforeEnter onExitComplete={() => console.log("exit")}>
+      <AnimatePresence initial={false} exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
           <Route path='/portfolio' render={() => (
               <PortfolioPage 

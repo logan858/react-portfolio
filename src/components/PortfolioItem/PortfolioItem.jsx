@@ -59,7 +59,7 @@ export default function PortfolioItem(props){
                 <a href={`${props.link}`} target="_blank" rel="noopener noreferrer">
                     <motion.div 
                         whileHover={{
-                            opacity: 1,
+                            y: -5,
                         }}
                         className="port-pics-container"
                         style={{ backgroundImage: `url(${props.pic[0]})` }} 

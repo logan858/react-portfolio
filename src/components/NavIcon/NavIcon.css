@@ -8,6 +8,8 @@
   width: 34px;
 }
 .icon-svg {
-  transition: 0.7s;
   width: 34px;
+}
+.icon-svg>path {
+  transition: 0.7s;
 }
