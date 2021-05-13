@@ -26,6 +26,7 @@ export default function HomeComp() {
             animate={{ 
                 opacity: 1, 
                 transition: {
+                    delay: 0.3,
                     duration: 0.35
                 }
             }}   

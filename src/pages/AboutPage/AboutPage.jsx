@@ -5,7 +5,7 @@ import AboutComp from '../../components/AboutComp/AboutComp'
 export default function AboutPage(props) {
     return (
         <motion.div 
-            initial={{ x: 8000}}
+            initial={{ x: 4000}}
             animate={{ 
                 x: 0, 
                 transition: {

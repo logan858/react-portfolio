@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export default function ContactPage(props) {
     return (
         <motion.div 
-            initial={{ x: 8000}}
+            initial={{ x: 4000}}
             animate={{ 
                 x: 0, 
                 transition: {

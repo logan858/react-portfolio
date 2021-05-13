@@ -37,7 +37,7 @@ export default function Main(props) {
           setIndex={setIndex}
           backgrounds={backgrounds}
       />
-      <AnimatePresence initial={false} exitBeforeEnter>
+      <AnimatePresence initial={false}>
         <Switch location={location} key={location.pathname}>
           <Route path='/portfolio' render={() => (
               <PortfolioPage 
