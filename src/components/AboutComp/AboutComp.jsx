@@ -41,7 +41,7 @@ export default function AboutComp(props) {
                 onMouseEnter={evnt => addColor(evnt)}
                 onMouseOut={evnt => removeColor(evnt)}
             >
-                Hi!  My name is Logan Major, &nbsp;a software engineering grad, &nbsp;a bringer of business solutions, &nbsp;and a student of computer science. 
+                Hi! My name is Logan Major - based out of Toronto, ON. -  &nbsp;a software engineering grad, &nbsp;a bringer of business solutions, &nbsp;and a student of computer science. 
                 <br/><br/>
                 Check out my links below to see some of my work. You can also reach out directly via LinkedIn or through the 'contact' page to the left.
             </div>
