@@ -10,6 +10,11 @@
     -moz-user-select: none;
     -ms-user-select: none;
  }
+ @media only screen and (max-width: 600px) {
+    .home-container {
+      margin-left: 14%;
+    }
+}
 .home-content {
     color: rgb(243, 243, 243);
     font-size: 32px;
@@ -40,7 +45,7 @@ span {
     transition: 0.7s;
 }
 span:hover { 
-    color: rgb(131, 131, 131);
+    color: rgb(243, 243, 243);
 }
 .return-content {
     grid-row: 1 / 2;

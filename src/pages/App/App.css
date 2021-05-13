@@ -25,3 +25,16 @@
   -moz-user-select: none;
   -ms-user-select: none;
 }
+@media only screen and (max-width: 600px) {
+  .content-frame {
+    margin: 0 0 0 15%;
+    grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
+    height: 200vh;
+    overflow: auto;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .content-frame {
+    margin: 0 0 0 8%;
+  }
+}
