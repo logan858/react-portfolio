@@ -1,7 +1,8 @@
 ## A React Portfolio
-A portfolio made with react
+Well hello there. This is a little portfolio project I created using React, JS, MongoDB & Express.  Aided with a little bit of animation help from Framer-motion. Please take a look around, and don't hesitate to reach out.
 
 ## Screens
+* no screens
 
 ## Links
 * [Deployed](https://loganjmajor.com/)
