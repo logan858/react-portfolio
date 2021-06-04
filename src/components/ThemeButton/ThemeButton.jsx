@@ -5,18 +5,18 @@ export default function ThemeButton(props) {
     const handleTheme = () => {
         if(props.theme === "Dark") {
             props.setTheme("Light")
-            props.setColor("rgba(255, 255, 255, 0.8)")
+            props.setColor("rgba(200, 200, 200, 0.4")
             props.setAccentColor("rgba(47, 47, 47, 0.9)")
         } else {
             props.setTheme("Dark")
-            props.setColor("rgba(10, 10, 10, 0.9)")
+            props.setColor("rgba(25, 25, 25, 0.9)")
             props.setAccentColor("rgba(255, 255, 255, 0.4)")
         }
     }
 
     return (
         <div>
-            <div onClick={() => handleTheme()} id="theme" style={props.theme === "Dark" ?{backgroundColor: 'rgba(47, 47, 47, 0.8)'} : {backgroundColor: 'rgb(232, 220, 210)'}}>
+            <div onClick={() => handleTheme()} id="theme" style={props.theme === "Dark" ?{backgroundColor: 'rgba(47, 47, 47, 0.8)'} : {backgroundColor: 'rgba(200, 200, 200, 0.4'}}>
                 <motion.svg 
                     initial={{ rotate: 0 }}
                     animate={{rotate: 360}}
