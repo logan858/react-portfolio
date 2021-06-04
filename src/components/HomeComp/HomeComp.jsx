@@ -14,7 +14,7 @@ export default function HomeComp() {
     }, [])
 
     useEffect(() => {
-        const titles = ["software developer", "designer", "software engineer", "fullstack"]
+        const titles = ["software developer", "designer", "software engineer", "fullstack", "MERN stack", "django", "python", "javascript", "java", "sql", "nosql", "backend", "frontend", "react"]
         let newTitle = titles[Math.floor(Math.random()*titles.length)] 
         setDisplayTitle(newTitle)
     }, [count])

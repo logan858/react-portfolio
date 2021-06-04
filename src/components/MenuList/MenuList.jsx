@@ -1,16 +1,18 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import NavIcon from '../NavIcon/NavIcon'
 import NavFooter from '../NavFooter/NavFooter'
 import './MenuList.css';
 import { Link } from 'react-router-dom';
 
 export default function MenuList(props) {
-    const [iconStyle, setIconStyle] = useState("white")
+    const [iconStyle, setIconStyle] = useState(props.accentColor)
     const [focused, setFocused] = useState(false)
 
     const handleClick = (x) => {
         setFocused(x)
     } 
+
+    useEffect(() => setIconStyle(props.accentColor), [props.accentColor])
     
     if(props.theme === "Dark") {
         return (
@@ -28,7 +30,7 @@ export default function MenuList(props) {
                         <svg 
                             onClick={() => handleClick('home')} 
                             height="40px" 
-                            style={focused=== 'home' ? {fill: iconStyle, transform: 'scale(1.2, 1.2)'} : {fill: 'white'}}
+                            style={focused=== 'home' ? {fill: iconStyle, transform: 'scale(1.2, 1.2)'} : {fill: props.accentColor}}
                             className={"menu-list-svg"}
                         >
                             <path d="M1.3,15.5L16.3,2c0.8-0.8,1.6-0.7,2.5,0l3.4,3.3V2.9h3.6v5.6l6.6,6.6c0.7,0.7,0.6,1.3,0.2,1.9l-1,1.3 c-0.5,0.5-1.1,0.6-1.7-0.1L19.1,7.1C18,6.2,17,6,15.9,6.9L3.8,18.6c-0.6,0.5-1.1,0.4-1.5,0l-1.2-1.7C0.8,16.4,0.8,15.9,1.3,15.5z"/>
@@ -40,7 +42,7 @@ export default function MenuList(props) {
                     <div className="icon-container">
                         <svg 
                             onClick={() => handleClick('portfolio')}
-                            style={focused=== 'portfolio' ? {fill: iconStyle, transform: 'scale(1.2, 1.2)'} : {fill: 'white'}}
+                            style={focused=== 'portfolio' ? {fill: iconStyle, transform: 'scale(1.2, 1.2)'} : {fill: props.accentColor}}
                             className={"menu-list-svg"}
                             height="32px" 
                         >
@@ -53,7 +55,7 @@ export default function MenuList(props) {
                     <div className="icon-container">
                         <svg 
                             onClick={() => handleClick('contact')}
-                            style={focused=== 'contact' ? {fill: iconStyle, transform: 'scale(1.2, 1.2)'} : {fill: 'white'}}
+                            style={focused=== 'contact' ? {fill: iconStyle, transform: 'scale(1.2, 1.2)'} : {fill: props.accentColor}}
                             className={"menu-list-svg"}
                             height="32px"
                         >
@@ -65,7 +67,7 @@ export default function MenuList(props) {
                     <div className="icon-container">
                         <svg 
                             onClick={() => handleClick('about')}
-                            style={focused=== 'about' ? {fill: iconStyle, transform: 'scale(1.2, 1.2)'} : {fill: 'white'}}
+                            style={focused=== 'about' ? {fill: iconStyle, transform: 'scale(1.2, 1.2)'} : {fill: props.accentColor}}
                             className={"menu-list-svg"}
                             height="32px"
                         >
