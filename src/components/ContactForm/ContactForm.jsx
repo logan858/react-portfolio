@@ -17,7 +17,10 @@ export default class ContactForm extends React.Component {
             body: JSON.stringify(body)
         }
         await fetch("/api/contact", options)
-            .then(res=> res.json())
+            .then(res=> 
+                // res.json()
+                console.log(res)
+                )
             .then(data => {
                 this.setState({name: "", email: "", message: "", contact: "Message Sent Succesfully"})
             })
