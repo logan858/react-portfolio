@@ -23,6 +23,8 @@ async function details(req, res) {
 async function contact(req, res) {
     const transporter = nodeMail.createTransport({
         service: 'gmail',
+        port: 465,
+        secure: true,
         auth: {
             user: process.env.EMAILROUTE,
             pass: process.env.EMAILBUDDY
